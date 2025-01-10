@@ -1,14 +1,20 @@
 // for(let i = 0; i < 10; i++){
 //     console.log(`volta número: ${i}`);
 // }
-
 for(let i = 1; i <= 31; i++){
     dia.innerHTML += `<option>${i}</option>`;
 }
+const mes = document.getElementById('mes');
 
-for(let i = 1; i <= 12; i++){
-    mes.innerHTML += `<option>${i}</option>`;
+const meses = [
+    "Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", 
+    "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"
+];
+
+for (let i = 0; i < meses.length; i++) {
+    mes.innerHTML += `<option value="${i + 1}">${meses[i]}</option>`;
 }
+
 
 for(let i = new Date().getFullYear(); i >= new Date().getFullYear() - 50; i--){
     ano.innerHTML += `<option>${i}</option>`;
