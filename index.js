@@ -5,6 +5,10 @@
 // for(let i = 1; i <= 28; i++){
 //     dia.innerHTML += `<option>${i}</option>`;
 // }
+for(let i = 1; i <= 31; i++){
+    dia.innerHTML += `<option>${i}</option>`;
+}
+
 const mes = document.getElementById('mes');
 
 const meses = [
@@ -24,24 +28,39 @@ for(let i = new Date().getFullYear(); i >= new Date().getFullYear() - 50; i--){
 function verificar(){
 
     if(Number(ano.value) % 4 == 0){
-    alert(`Quem nasceu em ${dia.value}/${mes.value}/${ano.value}, nasceu em ano bissexto`)
+        alert(`Quem nasceu em ${dia.value}/${mes.value}/${ano.value}, nasceu em ano bissexto`)
+    } else{
+        alert(`Quem nasceu em ${dia.value}/${mes.value}/${ano.value}, Não nasceu em ano bissexto`)
     }
 }
 
 function mesAtual(){
+    const mA = mes.value;
 
-
-    if(mes.value == 1){
-        for(let i = 1; i <= 31;i++){
+    if(mA == 1 || mA == 3 || mA == 5 || mA == 7 || mA == 8 || mA == 10 || mA == 12){
+        for(let i = 1; i <= 31; i++){
             dia.innerHTML += `<option>${i}</option>`;
     }
 
-} else if(mes.value == 2){
+} else if(mA == 2){
     for(let i = 1; i <= 28; i++){
         dia.innerHTML += `<option>${i}</option>`;
 }
-} else if(mes.value == 3){
-    for(let i = 1; i <= 31; i++){
+
+} else{
+    for(let i = 1; i <= 30; i++){
+        dia.innerHTML += `<option>${i}</option>`;
+}
+}
+}
+
+function anoBissesto(){
+    if(ano.value % 4 == 0){
+        for(let i = 1; i <= 29; i++){
+            dia.innerHTML += `<option>${i}</option>`;
+    }
+} else if(ano.value % 4 !== 0){
+    for(let i = 1; i <= 28; i++){
         dia.innerHTML += `<option>${i}</option>`;
 }
 }

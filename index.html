@@ -3,23 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+              }
+            }
+          }
+        }
+      </script>
     <title>Javascript - estrutura de repetição</title>
 </head>
-<body>
-    <div>
-        <div>
-            <label for="dia">Dia</label>
-            <select id="dia"></select>
+<body class="flex items-center justify-center h-lvh">
+    <div  class="flex w-[800px] h-[150px] items-center bg-gray-700 justify-around rounded-[15px]">
+        <div class="flex gap-[15px]">
+            <label class="text-green-500 font-semibold" class="" for="dia">Dia</label>
+            <select class="rounded-[5px] w-[110px]" id="dia"></select>
         </div>
-        <div>
-            <label for="mes">Mês</label>
-            <select id="mes" onchange="mesAtual()"></select>
+        <div class="flex gap-[15px]">
+            <label class="text-green-500 font-semibold" for="mes">Mês</label>
+            <select class="rounded-[5px] w-[110px]" id="mes" onchange="mesAtual()"></select>
         </div>
-        <div>
-            <label for="ano">Ano</label>
-            <select id="ano"></select>
+        <div class="flex gap-[15px]">
+            <label class="text-green-500 font-semibold" for="ano">Ano</label>
+            <select class="rounded-[5px] w-[110px]" id="ano" onchange="anoBissesto()"></select>
         </div>
-        <button onclick="verificar()">Verificar</button>
+        <button class="bg-green-500 rounded-[5px] w-[110px] h-[30px]" onclick="verificar()">Verificar</button>
     </div>
 
     <script src="index.js"></script>
