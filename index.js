@@ -1,9 +1,10 @@
 // for(let i = 0; i < 10; i++){
 //     console.log(`volta número: ${i}`);
 // }
-for(let i = 1; i <= 31; i++){
-    dia.innerHTML += `<option>${i}</option>`;
-}
+
+// for(let i = 1; i <= 28; i++){
+//     dia.innerHTML += `<option>${i}</option>`;
+// }
 const mes = document.getElementById('mes');
 
 const meses = [
@@ -27,3 +28,21 @@ function verificar(){
     }
 }
 
+function mesAtual(){
+
+
+    if(mes.value == 1){
+        for(let i = 1; i <= 31;i++){
+            dia.innerHTML += `<option>${i}</option>`;
+    }
+
+} else if(mes.value == 2){
+    for(let i = 1; i <= 28; i++){
+        dia.innerHTML += `<option>${i}</option>`;
+}
+} else if(mes.value == 3){
+    for(let i = 1; i <= 31; i++){
+        dia.innerHTML += `<option>${i}</option>`;
+}
+}
+}
